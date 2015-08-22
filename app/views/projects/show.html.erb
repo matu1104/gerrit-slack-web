@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Plus two:</strong>
+  <%= @project.plus_two %>
+</p>
+
+<p>
+  <strong>Plus one:</strong>
+  <%= @project.plus_one %>
+</p>
+
+<p>
+  <strong>Zero:</strong>
+  <%= @project.zero %>
+</p>
+
+<p>
+  <strong>Minus one:</strong>
+  <%= @project.minus_one %>
+</p>
+
+<p>
+  <strong>Minus two:</strong>
+  <%= @project.minus_two %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @project.comments %>
+</p>
+
+<p>
+  <strong>Jenkins success:</strong>
+  <%= @project.jenkins_success %>
+</p>
+
+<p>
+  <strong>Jenkins failure:</strong>
+  <%= @project.jenkins_failure %>
+</p>
+
+<p>
+  <strong>New patch:</strong>
+  <%= @project.new_patch %>
+</p>
+
+<p>
+  <strong>Qa approved:</strong>
+  <%= @project.qa_approved %>
+</p>
+
+<p>
+  <strong>Product approved:</strong>
+  <%= @project.product_approved %>
+</p>
+
+<p>
+  <strong>Qa and product approved:</strong>
+  <%= @project.qa_and_product_approved %>
+</p>
+
+<p>
+  <strong>Merged:</strong>
+  <%= @project.merged %>
+</p>
+
+<p>
+  <strong>Channel name:</strong>
+  <%= @project.channel_name %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

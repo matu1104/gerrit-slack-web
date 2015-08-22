@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  plus_two: 1
+  plus_one: 1
+  zero: 1
+  minus_one: 1
+  minus_two: 1
+  comments: 1
+  jenkins_success: 1
+  jenkins_failure: 1
+  new_patch: 1
+  qa_approved: 1
+  product_approved: 1
+  qa_and_product_approved: 1
+  merged: 1
+  channel_name: MyString
+
+two:
+  name: MyString
+  plus_two: 1
+  plus_one: 1
+  zero: 1
+  minus_one: 1
+  minus_two: 1
+  comments: 1
+  jenkins_success: 1
+  jenkins_failure: 1
+  new_patch: 1
+  qa_approved: 1
+  product_approved: 1
+  qa_and_product_approved: 1
+  merged: 1
+  channel_name: MyString

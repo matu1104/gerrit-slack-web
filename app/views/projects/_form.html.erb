@@ -1,0 +1,77 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :plus_two %><br>
+    <%= f.number_field :plus_two %>
+  </div>
+  <div class="field">
+    <%= f.label :plus_one %><br>
+    <%= f.number_field :plus_one %>
+  </div>
+  <div class="field">
+    <%= f.label :zero %><br>
+    <%= f.number_field :zero %>
+  </div>
+  <div class="field">
+    <%= f.label :minus_one %><br>
+    <%= f.number_field :minus_one %>
+  </div>
+  <div class="field">
+    <%= f.label :minus_two %><br>
+    <%= f.number_field :minus_two %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.number_field :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :jenkins_success %><br>
+    <%= f.number_field :jenkins_success %>
+  </div>
+  <div class="field">
+    <%= f.label :jenkins_failure %><br>
+    <%= f.number_field :jenkins_failure %>
+  </div>
+  <div class="field">
+    <%= f.label :new_patch %><br>
+    <%= f.number_field :new_patch %>
+  </div>
+  <div class="field">
+    <%= f.label :qa_approved %><br>
+    <%= f.number_field :qa_approved %>
+  </div>
+  <div class="field">
+    <%= f.label :product_approved %><br>
+    <%= f.number_field :product_approved %>
+  </div>
+  <div class="field">
+    <%= f.label :qa_and_product_approved %><br>
+    <%= f.number_field :qa_and_product_approved %>
+  </div>
+  <div class="field">
+    <%= f.label :merged %><br>
+    <%= f.number_field :merged %>
+  </div>
+  <div class="field">
+    <%= f.label :channel_name %><br>
+    <%= f.text_field :channel_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
