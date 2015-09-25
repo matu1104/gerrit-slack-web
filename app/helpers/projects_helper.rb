@@ -5,7 +5,7 @@ module ProjectsHelper
 
     options.map do |key, option|
       label(object, field, class: 'radio-inline') do
-        radio_button(object, field, option) + key
+        radio_button(object, field, option, (option == 0 ? { checked: true } : {})) + key
       end
     end.join.html_safe
   end

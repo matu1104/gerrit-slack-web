@@ -14,7 +14,7 @@
             <tr>
               <td><%= project.name %></td>
               <td>#<%= project.channel_name %></td>
-              <td><%= link_to 'Show', project, class: 'btn btn-xs btn-info' %> <%= link_to 'Edit', edit_project_path(project), class: 'btn btn-xs btn-success' %> <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
+              <td class="project-table-buttons"><%= link_to 'Edit', edit_project_path(project), class: 'btn btn-xs btn-success' %> <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
             </tr>
           <% end %>
         </tbody>

@@ -79,3 +79,8 @@ body {
     color: #757373;
     width: 130px;
 }
+
+.project-table-buttons{
+    white-space: nowrap;
+    width: 1px;
+}
