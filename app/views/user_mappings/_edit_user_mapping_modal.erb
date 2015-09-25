@@ -1,0 +1,26 @@
+<div id="edit-user-mapping-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Edit User Mapping</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for(:user_mapping, method: :put, html: { id: 'edit-mapping-form' }) do |f| %>
+          <div class="form-group">
+            <%= f.label :slack_name %><br>
+            <%= f.text_field :slack_name, class: 'form-control', id: 'slack-name-edit-form' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :gerrit_name %><br>
+            <%= f.text_field :gerrit_name, class: 'form-control', id: 'gerrit-name-edit-form' %>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit class: "btn btn-primary" %>
+          </div>
+        <% end %>
+        </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

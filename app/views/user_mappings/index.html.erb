@@ -1,0 +1,28 @@
+<h1>User Mappings</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Slack name</th>
+      <th>Gerrit name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_mappings.each do |user_mapping| %>
+      <tr>
+        <td><%= user_mapping.slack_name %></td>
+        <td><%= user_mapping.gerrit_name %></td>
+        <td class="table-mapping-table-buttons"><%= link_to 'Edit', '#', class: 'btn btn-xs btn-success edit-user-mapping-link', data: {user_mapping: user_mapping} %> <%= link_to 'Destroy', user_mapping, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add User Mapping', '#', class: 'btn btn-primary', id: 'add-user-mapping-link'%>
+
+<%= render 'add_user_mapping_modal' %>
+<%= render 'edit_user_mapping_modal' %>
