@@ -65,6 +65,7 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+      @notification_fields = [:plus_two, :plus_one, :zero, :minus_one, :minus_two, :comments, :jenkins_success, :jenkins_failure, :new_patch, :qa_approved, :product_approved, :merged]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

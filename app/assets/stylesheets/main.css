@@ -74,3 +74,8 @@ body {
 .main-container {
     padding-top: 40px;
 }
+
+.notification-label {
+    color: #757373;
+    width: 130px;
+}
