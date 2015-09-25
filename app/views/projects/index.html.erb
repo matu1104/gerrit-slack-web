@@ -1,54 +1,26 @@
 
-<h1>Listing Projects</h1>
+      <h1>Projects</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Project name</th>
+            <th>Slack Channel</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Plus two</th>
-      <th>Plus one</th>
-      <th>Zero</th>
-      <th>Minus one</th>
-      <th>Minus two</th>
-      <th>Comments</th>
-      <th>Jenkins success</th>
-      <th>Jenkins failure</th>
-      <th>New patch</th>
-      <th>Qa approved</th>
-      <th>Product approved</th>
-      <th>Qa and product approved</th>
-      <th>Merged</th>
-      <th>Channel name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <tbody>
+          <% @projects.each do |project| %>
+            <tr>
+              <td><%= project.name %></td>
+              <td>#<%= project.channel_name %></td>
+              <td><%= link_to 'Show', project, class: 'btn btn-xs btn-info' %> <%= link_to 'Edit', edit_project_path(project), class: 'btn btn-xs btn-success' %> <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.plus_two %></td>
-        <td><%= project.plus_one %></td>
-        <td><%= project.zero %></td>
-        <td><%= project.minus_one %></td>
-        <td><%= project.minus_two %></td>
-        <td><%= project.comments %></td>
-        <td><%= project.jenkins_success %></td>
-        <td><%= project.jenkins_failure %></td>
-        <td><%= project.new_patch %></td>
-        <td><%= project.qa_approved %></td>
-        <td><%= project.product_approved %></td>
-        <td><%= project.qa_and_product_approved %></td>
-        <td><%= project.merged %></td>
-        <td><%= project.channel_name %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Project', new_project_path %>
+      <%= link_to 'New Project', new_project_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>

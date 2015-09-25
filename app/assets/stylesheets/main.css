@@ -70,3 +70,7 @@ body {
     padding: 2px!important;
     margin-bottom: 15px!important;
 }
+
+.main-container {
+    padding-top: 40px;
+}

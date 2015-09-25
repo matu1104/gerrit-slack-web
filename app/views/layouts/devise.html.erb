@@ -20,26 +20,11 @@
       <%= link_to('GerrSlack', projects_path, class: 'navbar-brand') %>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
-    <ul class="nav navbar-nav">
-      <li><%= link_to('Project', projects_path) %> </li>
-      <li><a href="#about">User Mapping</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-rightnav navbar-nav navbar-right">
-      <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-    </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
 
-  <div class="container main-container">
-    <div class="well row">
-      <div class="col-md-offset-1 col-md-10">
-
 <%= yield %>
-
-      </div>
-    </div>
-  </div>
 
 <%= render partial: 'shared/background' %>
 
