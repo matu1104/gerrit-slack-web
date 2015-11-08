@@ -1,4 +1,4 @@
-server '192.168.1.21', roles: [:web, :app, :db], primary: true
+
 
 set :repo_url,        'git@github.com:matu1104/gerrit-slack-web.git'
 set :application,     'gerrit-slack-web'
@@ -30,7 +30,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # set :keep_releases, 5
 
 ## Linked Files & Directories (Default None):
-# set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/initializers/devise.rb}
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do
